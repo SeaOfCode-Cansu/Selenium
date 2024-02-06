@@ -78,4 +78,8 @@ public class CommonActions {
         }
     }
 
+    public void maximixeScreen() {
+        driver.manage().window().maximize();
+    }
+
 }
