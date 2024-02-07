@@ -13,7 +13,15 @@ import org.testng.annotations.Test;
 import webFunctionalTest.java.api.util.CommonActions;
 import webFunctionalTest.java.pages.AmazonPage;
 import webFunctionalTest.java.pages.ProductPage;
+import webFunctionalTest.java.util.ScreenshotUtils;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class ProductDetailsTest {
@@ -63,6 +71,13 @@ public class ProductDetailsTest {
         // Assert add to card button is showing
         WebElement addCardBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(productPage.btnAddCard));
         Assert.assertTrue(addCardBtn.isDisplayed());
+
+        try {
+            ScreenshotUtils.takeScreenshot(driver);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @AfterClass
