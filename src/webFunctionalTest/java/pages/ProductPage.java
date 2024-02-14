@@ -29,6 +29,9 @@ public class ProductPage {
     public By productPrice = By.xpath("//span[@class='a-price-whole']");
     public By productRate = By.id("acrPopover");
     public By btnAddCard = By.id("add-to-cart-button");
+    public String expectedPageTitle = "Apple 2022 M2 çipli MacBook Air laptop 13.6 inç Liquid Retina ekran, 8GB RAM, 256 GB SSD depolama, arkadan aydınlatmalı klavye, 1080p FaceTime HD kamera. iPhone ve iPad ile uyumlu;\u200B\u200B\u200B\u200B\u200B\u200B\u200B Gümüş Rengi : Amazon.com.tr: Bilgisayar";
+    public String txtaddCard = "Sepete Ekle";
+    public By expectedAddToCardTxt = By.id("add-to-cart-button");
 
     // Methods
     public void searchForProduct() {
